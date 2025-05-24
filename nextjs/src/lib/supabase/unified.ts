@@ -86,11 +86,11 @@ export class SassClient {
         return this.client.from('todo_list').insert(row)
     }
 
-    async removeTask (id: string) {
+    async removeTask (id: number) {
         return this.client.from('todo_list').delete().eq('id', id)
     }
 
-    async updateAsDone (id: string) {
+    async updateAsDone (id: number) {
         return this.client.from('todo_list').update({done: true}).eq('id', id)
     }
 
