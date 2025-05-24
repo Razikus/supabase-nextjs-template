@@ -1,12 +1,13 @@
 {
-  "name": "sasstemplate",
+  "name": "bite-club",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "setup:supabase:local": "bash ./scripts/setup_local_supabase.sh"
   },
   "dependencies": {
     "@next/third-parties": "^15.1.5",
