@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION auth.is_user_authenticated()
+CREATE OR REPLACE FUNCTION public.is_user_authenticated()
 RETURNS boolean
 LANGUAGE sql
 SECURITY DEFINER
