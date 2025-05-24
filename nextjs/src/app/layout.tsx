@@ -15,14 +15,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  let theme = process.env.NEXT_PUBLIC_THEME
-  if(!theme) {
-    theme = "theme-sass3"
-  }
   const gaID = process.env.NEXT_PUBLIC_GOOGLE_TAG;
   return (
     <html lang="en">
-    <body className={theme}>
+    <body>
       {children}
       <Analytics />
       <CookieConsent />
