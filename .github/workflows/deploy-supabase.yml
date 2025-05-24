@@ -1,0 +1,30 @@
+name: Deploy Supabase Migrations
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Supabase CLI
+        uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Set environment variables
+        run: |
+          echo "SUPABASE_ACCESS_TOKEN=${{ secrets.SUPABASE_ACCESS_TOKEN }}" >> $GITHUB_ENV
+          echo "SUPABASE_PROJECT_ID=${{ secrets.SUPABASE_PROJECT_ID }}" >> $GITHUB_ENV
+          echo "SUPABASE_DB_PASSWORD=${{ secrets.SUPABASE_DB_PASSWORD }}" >> $GITHUB_ENV
+
+      - name: Link Supabase project
+        run: supabase link --project-ref $SUPABASE_PROJECT_ID
+
+      - name: Run Supabase migrations
+        run: supabase db push --non-interactive
