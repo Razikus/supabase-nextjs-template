@@ -10,6 +10,9 @@ echo "⏳ Starting local Supabase instance (if not already running)..."
 cd "$PROJECT_ROOT"
 supabase start
 
+echo "🧹 Resetting and migrating local Supabase database to match all migrations..."
+supabase db reset
+
 # Parse variables from supabase status output
 SUPABASE_STATUS=$(supabase status)
 
