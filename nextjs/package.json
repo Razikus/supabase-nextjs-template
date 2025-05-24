@@ -9,7 +9,8 @@
     "lint": "next lint",
     "setup:supabase:local": "bash ./scripts/setup_local_supabase.sh",
     "supabase:migration": "bash ./scripts/create_and_add_supabase_migration.sh",
-    "supabase:reset": "bash ./scripts/reset_local_supabase_db.sh"
+    "supabase:reset": "bash ./scripts/reset_local_supabase_db.sh",
+    "supabase:types": "bash ./scripts/generate_supabase_types.sh"
   },
   "dependencies": {
     "@next/third-parties": "^15.1.5",
