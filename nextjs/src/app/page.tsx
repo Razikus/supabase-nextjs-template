@@ -82,7 +82,7 @@ export default function Home() {
 
                 <Link
                     href="https://github.com/Razikus/supabase-nextjs-template"
-                    className="bg-primary-800 text-white px-4 py-2 rounded-lg hover:bg-primary-900 transition-colors"
+                    className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -100,7 +100,7 @@ export default function Home() {
             <div className="text-center">
               <h1 className="text-5xl md:text-6xl font-bold tracking-tight">
                 Bootstrap Your SaaS
-                <span className="block text-primary-600">In 5 minutes</span>
+                <span className="block text-primary">In 5 minutes</span>
               </h1>
               <p className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">
                 Launch your SaaS product in days, not months. Complete with authentication and enterprise-grade security built right in.
@@ -162,7 +162,7 @@ export default function Home() {
             </p>
             <Link
                 href="/auth/register"
-                className="mt-8 inline-flex items-center px-6 py-3 rounded-lg bg-white text-primary-600 font-medium hover:bg-primary-50 transition-colors"
+                className="mt-8 inline-flex items-center px-6 py-3 rounded-lg bg-white text-primary font-medium hover:bg-primary-50 transition-colors"
             >
               Get Started Now
               <ArrowRight className="ml-2 h-5 w-5" />
