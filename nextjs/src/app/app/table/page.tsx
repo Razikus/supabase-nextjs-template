@@ -192,7 +192,7 @@ export default function TaskManagementPage() {
     if (initialLoading) {
         return (
             <div className="flex justify-center items-center min-h-[200px]">
-                <Loader2 className="h-8 w-8 animate-spin text-primary-600" />
+                <Loader2 className="h-8 w-8 animate-spin text-primary" />
             </div>
         );
     }
@@ -244,7 +244,7 @@ export default function TaskManagementPage() {
 
                     <div className="space-y-3 relative">
                         {loading && (
-                            <div className="absolute inset-0 bg-background/50 flex items-center justify-center backdrop-blur-sm">
+                            <div className="absolute inset-0 bg-background/50 flex items-center justify-center backdrop-blur-xs">
                                 <Loader2 className="h-8 w-8 animate-spin text-primary-600" />
                             </div>
                         )}
@@ -282,7 +282,7 @@ export default function TaskManagementPage() {
                                                 )}
                                             </div>
                                         </div>
-                                        <div className="flex items-center gap-2 flex-shrink-0">
+                                        <div className="flex items-center gap-2 shrink-0">
                                             {!task.done && (
                                                 <Button
                                                     onClick={() => handleMarkAsDone(task.id)}

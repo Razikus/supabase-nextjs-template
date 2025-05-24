@@ -47,7 +47,7 @@ const CookieConsent = () => {
         <div className="fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg z-50 transform transition-transform duration-500 ease-in-out">
             <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div className="flex items-center gap-3 flex-shrink-0">
+                    <div className="flex items-center gap-3 shrink-0">
                         <Shield className="h-5 w-5 text-blue-600" />
                         <div className="space-y-1">
                             <p className="text-sm text-gray-600">
@@ -67,7 +67,7 @@ const CookieConsent = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="flex items-center gap-3 flex-shrink-0">
+                    <div className="flex items-center gap-3 shrink-0">
                         <Button
                             variant="outline"
                             size="sm"

@@ -218,7 +218,7 @@ export function MFASetup({ onStatusChange }: MFASetupProps) {
                             <button
                                 onClick={startEnrollment}
                                 disabled={actionInProgress || !friendlyName.trim()}
-                                className="flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 disabled:opacity-50"
+                                className="flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 disabled:opacity-50"
                             >
                                 {actionInProgress ? 'Processing...' : 'Continue'}
                             </button>
@@ -263,7 +263,7 @@ export function MFASetup({ onStatusChange }: MFASetupProps) {
                             <button
                                 onClick={verifyFactor}
                                 disabled={actionInProgress || verifyCode.length === 0}
-                                className="flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 disabled:opacity-50"
+                                className="flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 disabled:opacity-50"
                             >
                                 {actionInProgress ? 'Verifying...' : 'Verify'}
                             </button>
@@ -281,7 +281,7 @@ export function MFASetup({ onStatusChange }: MFASetupProps) {
                         <button
                             onClick={() => setStep('name')}
                             disabled={actionInProgress}
-                            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 disabled:opacity-50"
+                            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 disabled:opacity-50"
                         >
                             {actionInProgress ? 'Processing...' : 'Add New Authentication Method'}
                         </button>

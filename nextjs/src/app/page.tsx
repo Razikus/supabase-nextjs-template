@@ -55,11 +55,11 @@ export default function Home() {
 
   return (
       <div className="min-h-screen">
-        <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100">
+        <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-xs z-50 border-b border-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between h-16 items-center">
-              <div className="flex-shrink-0">
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">
+              <div className="shrink-0">
+              <span className="text-2xl font-bold bg-linear-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">
                 {productName}
               </span>
               </div>
@@ -113,7 +113,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-16 bg-gradient-to-b from-white to-gray-50">
+        <section className="py-16 bg-linear-to-b from-white to-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (

@@ -50,7 +50,7 @@ export default function AuthLayout({
                 </div>
             </div>
 
-            <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-primary-600 to-primary-800">
+            <div className="hidden lg:flex lg:w-1/2 bg-linear-to-br from-primary-600 to-primary-800">
                 <div className="w-full flex items-center justify-center p-12">
                     <div className="space-y-6 max-w-lg">
                         <h3 className="text-white text-2xl font-bold mb-8">
@@ -59,10 +59,10 @@ export default function AuthLayout({
                         {testimonials.map((testimonial, index) => (
                             <div
                                 key={index}
-                                className="relative bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 shadow-xl"
+                                className="relative bg-white/5 backdrop-blur-xs rounded-xl p-6 border border-white/10 shadow-xl"
                             >
                                 <div className="flex items-start space-x-4">
-                                    <div className="flex-shrink-0">
+                                    <div className="shrink-0">
                                         <div className="w-10 h-10 rounded-full bg-primary-400/30 flex items-center justify-center text-white font-semibold">
                                             {testimonial.avatar}
                                         </div>

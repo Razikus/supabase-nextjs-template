@@ -36,13 +36,13 @@ const HomePricing = () => {
                                 <CardDescription>{tier.description}</CardDescription>
                             </CardHeader>
 
-                            <CardContent className="flex-grow flex flex-col">
+                            <CardContent className="grow flex flex-col">
                                 <div className="mb-6">
                                     <span className="text-4xl font-bold">{PricingService.formatPrice(tier.price)}</span>
                                     <span className="text-gray-600 ml-2">/month</span>
                                 </div>
 
-                                <ul className="space-y-3 mb-8 flex-grow">
+                                <ul className="space-y-3 mb-8 grow">
                                     {tier.features.map((feature) => (
                                         <li key={feature} className="flex items-center gap-2">
                                             <Check className="h-5 w-5 text-green-500" />
