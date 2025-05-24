@@ -40,6 +40,8 @@ update_env_var() {
   if grep -q "^${key}=" "$ENV_FILE"; then
     sed -i '' "s|^${key}=.*|${key}=${value}|" "$ENV_FILE"
   else
+    # Ensure the file ends with a newline before appending
+    tail -c1 "$ENV_FILE" | read -r _ || echo >> "$ENV_FILE"
     echo "${key}=${value}" >> "$ENV_FILE"
   fi
 }
