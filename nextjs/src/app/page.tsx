@@ -1,8 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Globe, Shield, Users, Key, Database, Clock } from 'lucide-react';
 import AuthAwareButtons from '@/components/AuthAwareButtons';
-import HomePricing from "@/components/HomePricing";
 
 export default function Home() {
   const productName = process.env.NEXT_PUBLIC_PRODUCTNAME;
