@@ -1,4 +1,4 @@
-// src/middleware.ts
+// nextjs/src/middleware.ts
 
 import { createMiddlewareClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
@@ -6,7 +6,7 @@ import { Database } from './lib/database.types'
 
 export async function middleware(request: NextRequest) {
   const response = NextResponse.next()
-  
+
   const supabase = createMiddlewareClient<Database>({
     supabaseUrl: process.env.NEXT_PUBLIC_SUPABASE_URL!,
     supabaseKey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
@@ -14,7 +14,6 @@ export async function middleware(request: NextRequest) {
     response,
   })
 
-  // This is the correct way to get and refresh the session
   await supabase.auth.getSession()
 
   return response
