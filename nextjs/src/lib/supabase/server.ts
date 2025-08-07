@@ -24,3 +24,6 @@ export const createClient = () => {
     }
   )
 }
+
+// This is the alias your project is looking for
+export const createSSRSassClient = createClient;
