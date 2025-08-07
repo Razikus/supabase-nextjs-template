@@ -51,26 +51,30 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold tracking-tight">
-              A Platform For Rights Holders & Creators
-            </h1>
-            <p className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">
-              Securely distribute your live event streams to selected content creators for greater audience reach.
-            </p>
-            <div className="mt-10 flex gap-4 justify-center">
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
-                I’m a Rights Holder
-              </button>
-              <button className="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-300">
-                I’m a Creator
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+<section className="relative pt-32 pb-24 overflow-hidden">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center">
+      <h1 className="text-5xl md:text-6xl font-bold tracking-tight">
+        A Platform For Rights Holders & Creators
+      </h1>
+      <p className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">
+        Securely distribute your live event streams to selected content creators for greater audience reach.
+      </p>
+      <div className="mt-10 flex gap-4 justify-center">
+        <Link href="/auth">
+          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+            I’m a Rights Holder
+          </button>
+        </Link>
+        <Link href="/auth/creator">
+          <button className="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-300">
+            I’m a Creator
+          </button>
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* How It Works Section */}
       <section className="py-24 bg-gray-50">
