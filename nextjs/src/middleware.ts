@@ -1,10 +1,18 @@
 // nextjs/src/middleware.ts
-import { NextResponse } from 'next/server'
-import { updateSession } from '@/lib/supabase/middleware'
+import { createMiddlewareClient } from '@supabase/ssr'
+import { NextResponse, type NextRequest } from 'next/server'
+import { Database } from '@/lib/database.types'
 
-export async function middleware(request) {
-  // This function is what handles the Supabase session update
-  return await updateSession(request)
+export async function middleware(request: NextRequest) {
+  const response = NextResponse.next()
+  const supabase = createMiddlewareClient<Database>({
+    supabaseUrl: process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    supabaseKey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    request,
+    response,
+  })
+  await supabase.auth.getSession()
+  return response
 }
 
 export const runtime = 'nodejs';
