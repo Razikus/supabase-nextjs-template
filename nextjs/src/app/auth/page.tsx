@@ -34,7 +34,7 @@ export default function RightsHolderAuthPage() {
       if (error) {
         alert(error.message);
       } else {
-        router.push('/app');
+        router.push('/dashboard');
       }
     }
   };
