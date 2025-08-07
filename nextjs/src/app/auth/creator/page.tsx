@@ -1,13 +1,13 @@
 // nextjs/src/app/auth/creator/page.tsx
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { createClient } from '@/lib/supabase/client';
 import { useRouter } from 'next/navigation';
 import { FaGoogle, FaTwitch } from 'react-icons/fa';
 
 export default function CreatorAuthPage() {
-  const supabase = createClient();
+  const [supabase] = useState(() => createClient()); // This is the key change
   const router = useRouter();
 
   const handleOAuthSignIn = async (provider: 'google' | 'twitch') => {
