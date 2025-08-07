@@ -9,7 +9,7 @@ export default function RightsHolderAuthPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isSigningUp, setIsSigningUp] = useState(false);
-  const supabase = createClient();
+  const [supabase] = useState(() => createClient()); // This is the key change
   const router = useRouter();
 
   const handleAuth = async (event: React.FormEvent) => {
