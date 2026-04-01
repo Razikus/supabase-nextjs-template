@@ -33,20 +33,20 @@ export default function AuthAwareButtons({ variant = 'primary' }) {
         return isAuthenticated ? (
             <Link
                 href="/app"
-                className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
+                className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200 btn-press cursor-pointer"
             >
-                Go to Dashboard
+                Ir al Dashboard
             </Link>
         ) : (
             <>
-                <Link href="/auth/login" className="text-gray-600 hover:text-gray-900">
-                    Login
-                </Link>
+                {/* <Link href="/auth/login" className="text-secondary-600 hover:text-secondary-900 transition-colors duration-200 cursor-pointer">
+                    Iniciar Sesión
+                </Link> */}
                 <Link
-                    href="/auth/register"
-                    className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
+                    href="/auth/login"
+                    className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200 btn-press cursor-pointer"
                 >
-                    Get Started
+                    Ingresar
                 </Link>
             </>
         );
@@ -56,25 +56,25 @@ export default function AuthAwareButtons({ variant = 'primary' }) {
     return isAuthenticated ? (
         <Link
             href="/app"
-            className="inline-flex items-center px-6 py-3 rounded-lg bg-primary-600 text-white font-medium hover:bg-primary-700 transition-colors"
+            className="inline-flex items-center px-6 py-3 rounded-xl bg-primary-600 text-white font-medium hover:bg-primary-700 transition-colors duration-200 btn-press cursor-pointer"
         >
-            Go to Dashboard
+            Ir al Dashboard
             <ArrowRight className="ml-2 h-5 w-5" />
         </Link>
     ) : (
         <>
             <Link
-                href="/auth/register"
-                className="inline-flex items-center px-6 py-3 rounded-lg bg-primary-600 text-white font-medium hover:bg-primary-700 transition-colors"
+                href="/auth/login"
+                className="inline-flex items-center px-6 py-3 rounded-xl bg-primary-600 text-white font-medium hover:bg-primary-700 transition-colors duration-200 btn-press cursor-pointer"
             >
-                Start Building Free
+                Comenzar
                 <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
-                href="#features"
-                className="inline-flex items-center px-6 py-3 rounded-lg border border-gray-300 text-gray-700 font-medium hover:bg-gray-50 transition-colors"
+                href="#funcionalidades"
+                className="inline-flex items-center px-6 py-3 rounded-xl border border-secondary-300 text-white font-medium hover:bg-white/10 transition-colors duration-200 cursor-pointer"
             >
-                Learn More
+                Conocer Más
                 <ChevronRight className="ml-2 h-5 w-5" />
             </Link>
         </>

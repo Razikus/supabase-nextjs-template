@@ -49,7 +49,11 @@
       "Bash(find /home/crisax/millos/BrokerT/nextjs -name .env* -type f)",
       "Bash(yarn list:*)",
       "Bash(ls node_modules/@hello-pangea/dnd/dist/*.d.ts)",
-      "Bash(yarn install:*)"
+      "Bash(yarn install:*)",
+      "Bash(yarn add:*)",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "Bash(npx playwright:*)",
+      "Bash(curl -s http://localhost:3000)"
     ]
   }
 }

@@ -311,6 +311,14 @@
     .input-primary {
         @apply border-secondary-300 focus:border-primary-500 focus:ring-primary-500;
     }
+
+    .btn-press {
+        @apply cursor-pointer;
+        transition: transform 160ms ease-out;
+    }
+    .btn-press:active {
+        transform: scale(0.97);
+    }
 }
 
 
