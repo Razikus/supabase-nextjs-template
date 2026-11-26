@@ -43,6 +43,8 @@ According to this - https://github.com/Razikus/supabase-nextjs-template/issues/4
 
 We are no longer able to modify auth schema. I modified original migrations to rename it to custom schema. If you need to migrate from older version - check supabase/migrations_for_old/20250525183944_auth_removal.sql
 
+Migration pull requests run [RattleCheck](./.github/workflows/rattlecheck.yml) on the current and legacy histories separately. It flags new high or critical permission findings before merge. Run `npx rattlecheck@latest` from the project root to review the current history locally. No Supabase credentials are needed.
+
 ## 🚀 Features
 
 - **Authentication**
